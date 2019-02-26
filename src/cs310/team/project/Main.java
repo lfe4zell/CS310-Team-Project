@@ -1,4 +1,4 @@
-package edu.jsu.mcis;
+package cs310.team.project;
 
 public class Main {
 

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-package edu.jsu.mcis;
-=======
 package cs310.team.project;
->>>>>>> f83ce9d9efd18708724984bc1cd4ef5d3d315e77
 
 import java.util.ArrayList;
 import java.util.regex.*;
@@ -27,13 +23,12 @@ public class PlinkoParser {
         Pattern p02 = Pattern.compile("^02[0-9]{14}");         // AI #02
         Pattern p17 = Pattern.compile("^17[0-9]{6}");          // AI #17        
         Pattern p10 = Pattern.compile("^10(.){1,20}[%\\x1D]"); // AI #10
-        Pattern p10eol = Pattern.compile("^10(.){1,20}$");     // AI #10 (eol)        Pattern p10 = Pattern.compile("^10(.){1,20}[%\\x1D]"); // AI #10
+        Pattern p10eol = Pattern.compile("^10(.){1,20}$");     // AI #10 (eol)
         Pattern p11 = Pattern.compile("^11[0-9]{6}");         // AI #11
         Pattern p12 = Pattern.compile("^12[0-9]{6}");         // AI #12
         Pattern p13 = Pattern.compile("^13[0-9]{6}");         // AI #13
         Pattern p15 = Pattern.compile("^15[0-9]{6}");         // AI #15
         Pattern p16 = Pattern.compile("^16[0-9]{6}");         // AI #16
-        Pattern p17 = Pattern.compile("^17[0-9]{6}");         // AI #17
         Pattern p20 = Pattern.compile("^20[0-9]{2}");         // AI #20
         
         Pattern p21 = Pattern.compile("^21(.){1,20}[%\\x1D]"); // AI #21
@@ -68,10 +63,32 @@ public class PlinkoParser {
 
         Pattern p255 = Pattern.compile("^255(.){1,13}[%\\x1D]"); // AI #255
         Pattern p255eol = Pattern.compile("^255(.){1,13}$");     // AI #255 (eol)
-
-
+        
+        //AI 30-331n
+        Pattern p30   = Pattern.compile("^30(.){1,20}[%\\x1D]"); //AI #30
+        Pattern p310n = Pattern.compile("^310n[0-9]{6}");   //AI #310N
+        Pattern p311n = Pattern.compile("^311n[0-9]{6}");   //AI #311N
+        Pattern p312n = Pattern.compile("^312n[0-9]{6}");   //AI #312N
+        Pattern p313n = Pattern.compile("^313n[0-9]{6}");   //AI #313N
+        Pattern p314n = Pattern.compile("^314n[0-9]{6}");   //AI #314N
+        Pattern p315n = Pattern.compile("^315n[0-9]{6}");   //AI #315N
+        Pattern p316n = Pattern.compile("^316n[0-9]{6}");   //AI #316N
+        Pattern p320n = Pattern.compile("^320n[0-9]{6}");   //AI #320N
+        Pattern p321n = Pattern.compile("^321n[0-9]{6}");   //AI #321N
+        Pattern p322n = Pattern.compile("^322n[0-9]{6}");   //AI #322N
+        Pattern p323n = Pattern.compile("^323n[0-9]{6}");   //AI #323N
+        Pattern p324n = Pattern.compile("^324n[0-9]{6}");   //AI #324N
+        Pattern p325n = Pattern.compile("^325n[0-9]{6}");   //AI #325N
+        Pattern p326n = Pattern.compile("^326n[0-9]{6}");   //AI #326N
+        Pattern p327n = Pattern.compile("^327n[0-9]{6}");   //AI #327N
+        Pattern p328n = Pattern.compile("^328n[0-9]{6}");   //AI #328N
+        Pattern p329n = Pattern.compile("^329n[0-9]{6}");   //AI #329N
+        Pattern p330n = Pattern.compile("^330n[0-9]{6}");   //AI #330N
+        Pattern p331n = Pattern.compile("^331n[0-9]{6}");   //AI #331N
+        
         /* Add pattern matchers to iterable collection */
         
+        //AI 0-2
         patterns.add(p00);
         patterns.add(p01);
         patterns.add(p02);
@@ -107,39 +124,7 @@ public class PlinkoParser {
         patterns.add(p255);
         patterns.add(p255eol);
         
-
-
-        
-
-        
-           
-        //Pattern p10eol = Pattern.compile("^10(.){1,20}$");     // AI #10 (eol)
-
-// <editor-fold desc="AI Patterns">
-        Pattern p30   = Pattern.compile("^30(.){1,20}[%\\x1D]"); //AI #30
-        Pattern p310n = Pattern.compile("^310n[0-9]{6}");   //AI #310N
-        Pattern p311n = Pattern.compile("^311n[0-9]{6}");   //AI #311N
-        Pattern p312n = Pattern.compile("^312n[0-9]{6}");   //AI #312N
-        Pattern p313n = Pattern.compile("^313n[0-9]{6}");   //AI #313N
-        Pattern p314n = Pattern.compile("^314n[0-9]{6}");   //AI #314N
-        Pattern p315n = Pattern.compile("^315n[0-9]{6}");   //AI #315N
-        Pattern p316n = Pattern.compile("^316n[0-9]{6}");   //AI #316N
-        Pattern p320n = Pattern.compile("^320n[0-9]{6}");   //AI #320N
-        Pattern p321n = Pattern.compile("^321n[0-9]{6}");   //AI #321N
-        Pattern p322n = Pattern.compile("^322n[0-9]{6}");   //AI #322N
-        Pattern p323n = Pattern.compile("^323n[0-9]{6}");   //AI #323N
-        Pattern p324n = Pattern.compile("^324n[0-9]{6}");   //AI #324N
-        Pattern p325n = Pattern.compile("^325n[0-9]{6}");   //AI #325N
-        Pattern p326n = Pattern.compile("^326n[0-9]{6}");   //AI #326N
-        Pattern p327n = Pattern.compile("^327n[0-9]{6}");   //AI #327N
-        Pattern p328n = Pattern.compile("^328n[0-9]{6}");   //AI #328N
-        Pattern p329n = Pattern.compile("^329n[0-9]{6}");   //AI #329N
-        Pattern p330n = Pattern.compile("^330n[0-9]{6}");   //AI #330N
-        Pattern p331n = Pattern.compile("^331n[0-9]{6}");   //AI #331N
-        
-// </editor-fold>
-  
-// <editor-fold desc="Add patterns to iterable structure">
+        //AI 30-331N
         patterns.add(p30);
         patterns.add(p310n);
         patterns.add(p311n);
@@ -160,9 +145,6 @@ public class PlinkoParser {
         patterns.add(p329n);
         patterns.add(p330n);
         patterns.add(p331n);
-
-        //patterns.add(p10eol);
-// </editor-fold>
 
         /* Loop until input is fully processed, or an unknown code is found */
         
