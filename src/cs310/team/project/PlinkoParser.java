@@ -62,6 +62,7 @@ public class PlinkoParser {
         
         //AI 30-331n
         Pattern p30   = Pattern.compile("^30(.){1,20}[%\\x1D]"); //AI #30
+        Pattern p30eol = Pattern.compile("^30(.){1,20}$");  //AI #30EOL
         Pattern p310n = Pattern.compile("^310n[0-9]{6}");   //AI #310N
         Pattern p311n = Pattern.compile("^311n[0-9]{6}");   //AI #311N
         Pattern p312n = Pattern.compile("^312n[0-9]{6}");   //AI #312N
@@ -191,6 +192,29 @@ public class PlinkoParser {
         Pattern p8110eol = Pattern.compile("^8110(.){1,70}$");
         Pattern p8112eol = Pattern.compile("^8112(.){1,70}$");
         Pattern p8200eol = Pattern.compile("^8200(.){1,70}$");
+        
+        //AI 90-99
+        Pattern p90 = Pattern.compile("^8200(.){1,30}[%\\x1D]");
+        Pattern p90eol = Pattern.compile("^8200(.){1,30}$");
+        Pattern p91 = Pattern.compile("^8200(.){1,90}[%\\x1D]");
+        Pattern p91eol = Pattern.compile("^8200(.){1,90}$");
+        Pattern p92 = Pattern.compile("^8200(.){1,90}[%\\x1D]");
+        Pattern p92eol = Pattern.compile("^8200(.){1,90}$");
+        Pattern p93 = Pattern.compile("^8200(.){1,90}[%\\x1D]");
+        Pattern p93eol = Pattern.compile("^8200(.){1,90}$");
+        Pattern p94 = Pattern.compile("^8200(.){1,90}[%\\x1D]");
+        Pattern p94eol = Pattern.compile("^8200(.){1,90}$");
+        Pattern p95 = Pattern.compile("^8200(.){1,90}[%\\x1D]");
+        Pattern p95eol = Pattern.compile("^8200(.){1,90}$");
+        Pattern p96 = Pattern.compile("^8200(.){1,90}[%\\x1D]");
+        Pattern p96eol = Pattern.compile("^8200(.){1,90}$");
+        Pattern p97 = Pattern.compile("^8200(.){1,90}[%\\x1D]");
+        Pattern p97eol = Pattern.compile("^8200(.){1,90}$");
+        Pattern p98 = Pattern.compile("^8200(.){1,90}[%\\x1D]");
+        Pattern p98eol = Pattern.compile("^8200(.){1,90}$");
+        Pattern p99 = Pattern.compile("^8200(.){1,90}[%\\x1D]");
+        Pattern p99eol = Pattern.compile("^8200(.){1,90}$");
+
         
 //</editor-fold>
         
@@ -364,6 +388,28 @@ public class PlinkoParser {
         patterns.add(p8112eol);
         patterns.add(p8200);
         patterns.add(p8200eol);
+        
+        //AI 90-99
+        patterns.add(p90);
+        patterns.add(p90eol);
+        patterns.add(p91);
+        patterns.add(p91eol);
+        patterns.add(p92);
+        patterns.add(p92eol);
+        patterns.add(p93);
+        patterns.add(p93eol);
+        patterns.add(p94);
+        patterns.add(p94eol);
+        patterns.add(p95);
+        patterns.add(p95eol);
+        patterns.add(p96);
+        patterns.add(p96eol);
+        patterns.add(p97);
+        patterns.add(p97eol);
+        patterns.add(p98);
+        patterns.add(p98eol);
+        patterns.add(p99);
+        patterns.add(p99eol);
         
 
 //</editor-fold>
