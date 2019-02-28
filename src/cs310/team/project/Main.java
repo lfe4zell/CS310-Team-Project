@@ -8,7 +8,7 @@ public class Main {
         
         // This sample code was scanned from Figure 2.6.14-3 (on Page 129)
         
-        System.out.println(p.parse("331n095011015300031715011910AB-123"));
+        System.out.println(p.parse("10095011015300031715011910AB-123"));
         
     }
     
