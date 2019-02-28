@@ -6,18 +6,14 @@ import java.util.regex.*;
 public class PlinkoParser {
     
     public String parse(String input) {
-        
+                
         String code = input;
         boolean matched = true;
         
         ArrayList<Pattern> patterns = new ArrayList<>();
         
-        /* Echo input string */
         
-        System.out.println("Parsing: " + input + "\n");
-        
-        /* Create precompiled pattern matchers (for AIs 01, 17, and 10) */
-        
+// <editor-fold desc="Application Identifier Pattern Matchers">
         Pattern p00 = Pattern.compile("^00[0-9]{18}");         // AI #00
         Pattern p01 = Pattern.compile("^01[0-9]{14}");         // AI #01
         Pattern p02 = Pattern.compile("^02[0-9]{14}");         // AI #02
@@ -86,6 +82,75 @@ public class PlinkoParser {
         Pattern p330n = Pattern.compile("^330n[0-9]{6}");   //AI #330N
         Pattern p331n = Pattern.compile("^331n[0-9]{6}");   //AI #331N
         
+        //AI 332n-352n
+        Pattern p332n = Pattern.compile("^332n[0-9]{6}");
+        Pattern p333n = Pattern.compile("^333n[0-9]{6}");
+        Pattern p334n = Pattern.compile("^334n[0-9]{6}");
+        Pattern p335n = Pattern.compile("^335n[0-9]{6}");
+        Pattern p336n = Pattern.compile("^336n[0-9]{6}");
+        Pattern p337n = Pattern.compile("^337n[0-9]{6}");
+        Pattern p340n = Pattern.compile("^340n[0-9]{6}");
+        Pattern p341n = Pattern.compile("^341n[0-9]{6}");
+        Pattern p342n = Pattern.compile("^342n[0-9]{6}");
+        Pattern p343n = Pattern.compile("^343n[0-9]{6}");
+        Pattern p344n = Pattern.compile("^344n[0-9]{6}");
+        Pattern p345n = Pattern.compile("^345n[0-9]{6}");
+        Pattern p346n = Pattern.compile("^346n[0-9]{6}");
+        Pattern p347n = Pattern.compile("^347n[0-9]{6}");
+        Pattern p348n = Pattern.compile("^348n[0-9]{6}");
+        Pattern p349n = Pattern.compile("^349n[0-9]{6}");
+        Pattern p350n = Pattern.compile("^350n[0-9]{6}");
+        Pattern p351n = Pattern.compile("^351n[0-9]{6}");
+        Pattern p352n = Pattern.compile("^352n[0-9]{6}");
+        
+        //AI 7001-723s
+        Pattern p7001 = Pattern.compile("^7001[0-9]{13}[%\\x1D]");
+        Pattern p7001eol = Pattern.compile("^7001[0-9]{13}$");
+        Pattern p7002 = Pattern.compile("^7002(.){1,30}[%\\x1D]");
+        Pattern p7002eol = Pattern.compile("^7002(.){1,30}$");
+        Pattern p7003 = Pattern.compile("^7003[0-9]{10}[%\\x1D]");
+        Pattern p7003eol = Pattern.compile("^7003[0-9]{10}$");
+        Pattern p7004 = Pattern.compile("^7004[0-9]{1,4}[%\\x1D]");
+        Pattern p7004eol = Pattern.compile("^7004[0-9]{1,4}$");
+        Pattern p7005 = Pattern.compile("^7005(.){1,12}[%\\x1D]");
+        Pattern p7005eol = Pattern.compile("^7005(.){1,12}$");
+        Pattern p7006 = Pattern.compile("^7006[0-9]{6}[%\\x1D]");
+        Pattern p7006eol = Pattern.compile("^7006[0-9]{6}$");
+        Pattern p7007 = Pattern.compile("^7007[0-9]{6,12}[%\\x1D]");
+        Pattern p7007eol = Pattern.compile("^7007[0-9]{6,12}$");
+        Pattern p7008 = Pattern.compile("^7008(.){1,3}[%\\x1D]");
+        Pattern p7008eol = Pattern.compile("^7008(.){1,3}$");
+        Pattern p7009 = Pattern.compile("^7009(.){1,10}[%\\x1D]");
+        Pattern p7009eol = Pattern.compile("^7009(.){1,10}$");
+        Pattern p7010 = Pattern.compile("^7010(.){1,2}[%\\x1D]");
+        Pattern p7010eol = Pattern.compile("^7010(.){1,2}$");
+        Pattern p7020 = Pattern.compile("^7020(.){1,20}[%\\x1D]");
+        Pattern p7020eol = Pattern.compile("^7020(.){1,20}$");
+        Pattern p7021 = Pattern.compile("^7021(.){1,20}[%\\x1D]");
+        Pattern p7021eol = Pattern.compile("^7021(.){1,20}$");
+        Pattern p7022 = Pattern.compile("^7022(.){1,20}[%\\x1D]");
+        Pattern p7022eol = Pattern.compile("^7022(.){1,20}$");
+        Pattern p7023 = Pattern.compile("^7023(.){1,20}[%\\x1D]");
+        Pattern p7023eol = Pattern.compile("^7023(.){1,20}$");
+        Pattern p703s = Pattern.compile("^703s(.){2}(.){1,27}[%\\x1D]");
+        Pattern p703seol = Pattern.compile("^703s(.){2}(.){1,27}$");
+        Pattern p710 = Pattern.compile("^710(.){1,20}[%\\x1D]");
+        Pattern p710eol = Pattern.compile("^710(.){1,20}$");
+        Pattern p711 = Pattern.compile("^711(.){1,20}[%\\x1D]");
+        Pattern p711eol = Pattern.compile("^711(.){1,20}$");
+        Pattern p712 = Pattern.compile("^712(.){1,20}[%\\x1D]");
+        Pattern p712eol = Pattern.compile("^712(.){1,20}$");
+        Pattern p713 = Pattern.compile("^713(.){1,20}[%\\x1D]");
+        Pattern p713eol = Pattern.compile("^713(.){1,20}$");
+        Pattern p714 = Pattern.compile("^714(.){1,20}[%\\x1D]");
+        Pattern p714eol = Pattern.compile("^714(.){1,20}$");
+        Pattern p723s = Pattern.compile("^723s(.){2}(.){1,28}[%\\x1D]");
+        Pattern p723seol = Pattern.compile("^723s(.){2}(.){1,28}$");
+        
+//</editor-fold>
+        
+        
+// <editor-fold desc="Adding Pattern Matchers to Array">
         /* Add pattern matchers to iterable collection */
         
         //AI 0-2
@@ -145,7 +210,74 @@ public class PlinkoParser {
         patterns.add(p329n);
         patterns.add(p330n);
         patterns.add(p331n);
+        
+        //AI 332n-352n
+        patterns.add(p332n);
+        patterns.add(p333n);
+        patterns.add(p334n);
+        patterns.add(p335n);
+        patterns.add(p336n);
+        patterns.add(p337n);
+        patterns.add(p340n);
+        patterns.add(p341n);
+        patterns.add(p342n);
+        patterns.add(p343n);
+        patterns.add(p344n);
+        patterns.add(p345n);
+        patterns.add(p346n);
+        patterns.add(p347n);
+        patterns.add(p348n);
+        patterns.add(p349n);
+        patterns.add(p350n);
+        patterns.add(p351n);
+        patterns.add(p352n);
+        
+        //AI 7001-723s
+        patterns.add(p7001);
+        patterns.add(p7001eol);
+        patterns.add(p7002);
+        patterns.add(p7002eol);
+        patterns.add(p7003);
+        patterns.add(p7003eol);
+        patterns.add(p7004);
+        patterns.add(p7004eol);
+        patterns.add(p7005);
+        patterns.add(p7005eol);
+        patterns.add(p7006);
+        patterns.add(p7006eol);
+        patterns.add(p7007);
+        patterns.add(p7007eol);
+        patterns.add(p7008);
+        patterns.add(p7008eol);
+        patterns.add(p7009);
+        patterns.add(p7009eol);
+        patterns.add(p7010);
+        patterns.add(p7010eol);
+        patterns.add(p7020);
+        patterns.add(p7020eol);
+        patterns.add(p7021);
+        patterns.add(p7021eol);
+        patterns.add(p7022);
+        patterns.add(p7022eol);
+        patterns.add(p7023);
+        patterns.add(p7023eol);
+        patterns.add(p703s);
+        patterns.add(p703seol);
+        patterns.add(p710);
+        patterns.add(p710eol);
+        patterns.add(p711);
+        patterns.add(p711eol);
+        patterns.add(p712);
+        patterns.add(p712eol);
+        patterns.add(p713);
+        patterns.add(p713eol);
+        patterns.add(p714);
+        patterns.add(p714eol);
+        patterns.add(p723s);
+        patterns.add(p723seol);
 
+//</editor-fold>
+        
         /* Loop until input is fully processed, or an unknown code is found */
         
         while ( !code.isEmpty() && matched ) {
