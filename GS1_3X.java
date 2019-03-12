@@ -636,6 +636,20 @@ public class GS1_3X extends GS1 {
         return output;
         
     }
+        public Object parse354(String element) {
+        
+        HashMap<String, Object> output = new HashMap<>();
+        System.out.println("Found Element String: " + element);
+        
+        output.put("title", "AREA SQUARE FEET");
+        output.put("ai", element.substring(0, 4) );
+        output.put("squarefeet", Integer.parseInt( element.substring(4, 10) ));
+        output.put("number", Integer.parseInt( element.substring(4, 10) ));
+        output.put("element", element);
+        
+        return output;
+        
+    }                    
     
         public Object parse355(String element) {
         
@@ -645,6 +659,8 @@ public class GS1_3X extends GS1 {
         output.put("title", "AREA SQUARE YARDS");
         output.put("ai", element.substring(0, 4) );
         output.put("squareyards", Integer.parseInt( element.substring(4, 10) ));
+        output.put("number", Integer.parseInt( element.substring(4, 10) ));
+
         output.put("element", element);
         
         return output;
