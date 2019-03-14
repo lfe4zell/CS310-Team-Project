@@ -42,6 +42,7 @@ public class GS1_9X extends GS1 {
         
         output.put("title", "INTERNAL");
         output.put("ai", element.substring(0, 2) );
+        output.put("data", element.substring(2));
         output.put("Data field", element.substring(2) );
         output.put("element", element);
         
@@ -62,6 +63,7 @@ public class GS1_9X extends GS1 {
         
         output.put("title", "INTERNAL");
         output.put("ai", element.substring(0, 2) );
+        output.put("data", element.substring(2));
         output.put("Data field", element.substring(2) );
         output.put("element", element);
         
@@ -82,6 +84,7 @@ public class GS1_9X extends GS1 {
         
         output.put("title", "INTERNAL");
         output.put("ai", element.substring(0, 2) );
+        output.put("data", element.substring(2));
         output.put("Data field", element.substring(2) );
         output.put("element", element);
         
@@ -102,6 +105,7 @@ public class GS1_9X extends GS1 {
         
         output.put("title", "INTERNAL");
         output.put("ai", element.substring(0, 2) );
+        output.put("data", element.substring(2));
         output.put("Data field", element.substring(2) );
         output.put("element", element);
         
@@ -122,6 +126,7 @@ public class GS1_9X extends GS1 {
         
         output.put("title", "INTERNAL");
         output.put("ai", element.substring(0, 2) );
+        output.put("data", element.substring(2));
         output.put("Data field", element.substring(2) );
         output.put("element", element);
         
@@ -142,6 +147,7 @@ public class GS1_9X extends GS1 {
         
         output.put("title", "INTERNAL");
         output.put("ai", element.substring(0, 2) );
+        output.put("data", element.substring(2));
         output.put("Data field", element.substring(2) );
         output.put("element", element);
         
@@ -162,6 +168,7 @@ public class GS1_9X extends GS1 {
         
         output.put("title", "INTERNAL");
         output.put("ai", element.substring(0, 2) );
+        output.put("data", element.substring(2));
         output.put("Data field", element.substring(2) );
         output.put("element", element);
         
@@ -182,6 +189,7 @@ public class GS1_9X extends GS1 {
         
         output.put("title", "INTERNAL");
         output.put("ai", element.substring(0, 2) );
+        output.put("data", element.substring(2));
         output.put("Data field", element.substring(2) );
         output.put("element", element);
         
@@ -202,6 +210,7 @@ public class GS1_9X extends GS1 {
         
         output.put("title", "INTERNAL");
         output.put("ai", element.substring(0, 2) );
+        output.put("data", element.substring(2));
         output.put("Data field", element.substring(2) );
         output.put("element", element);
         
@@ -222,6 +231,7 @@ public class GS1_9X extends GS1 {
         
         output.put("title", "INTERNAL");
         output.put("ai", element.substring(0, 2) );
+        output.put("data", element.substring(2));
         output.put("Data field", element.substring(2) );
         output.put("element", element);
         
