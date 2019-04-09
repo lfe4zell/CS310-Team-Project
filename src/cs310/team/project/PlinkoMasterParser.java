@@ -7,10 +7,12 @@ import java.util.HashMap;
 
 public class PlinkoMasterParser {
     
+    ArrayList exclusions = new ArrayList<String>();
+    
     /* TOP-LEVEL PARSE METHOD */
     
     public String parse(String code) {
-        
+                
         /* Create empty GS1 data collections */
         
         ArrayList<Object> data = new ArrayList<>();
@@ -35,18 +37,30 @@ public class PlinkoMasterParser {
                     
                     /* If so, instantiate the corresponding matcher/parser collection */
 
-                    Class c = Class.forName("edu.jsu.mcis.plinkoproto.GS1_" + d + "X");
+                    Class c = Class.forName("cs310.team.project.GS1_" + d + "X");
                     Constructor constructor = c.getConstructor();
                     GS1 p = (GS1)(constructor.newInstance());
-                    
+
                     /* Delegate match/parse to collection; capture results */
                     
                     results = (HashMap)(p.parse(code));
+                    
+                    exclusions.add(results.get("ai"));
+                    
+                    if (exclusions.contains("01") && exclusions.contains("02") || exclusions.contains("37")
+                            || exclusions.contains("255")) {
+                        System.out.println("Break\n");
+                        break;
+                    }
+                    
+                    System.out.println(results);
 
                 }
                 catch (Exception e) {System.err.println("GS1 Class Exception: " + e.toString());}
 
             }
+            
+            
             
             if (results != null) {
                 
