@@ -90,6 +90,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "NSN");
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Nato supply classification",Integer.parseInt(element.substring(4,8)));
         output.put("Assigning country", Integer.parseInt(element.substring(8,10)));
         output.put("Sequential number", Integer.parseInt(element.substring(10,14)));
@@ -111,6 +112,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "MEAT CUT");
         output.put("AI", element.substring(0, 4));
+        output.put("Data",element.substring(4));
         output.put("UN/ECE Product Classification" , element.substring(4));
         output.put("element",element);
         
@@ -130,6 +132,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "EXPIRY TIME");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("YY",Integer.parseInt(element.substring(4,6)));
         output.put("MM",Integer.parseInt(element.substring(6,8)));
         output.put("DD",Integer.parseInt(element.substring(8,10)));
@@ -154,6 +157,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "ACTIVE POTENCY");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Active Potency", Integer.parseInt(element.substring(4)));
         output.put("element", element);
         
@@ -174,6 +178,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "CATCH AREA");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Catch area", element.substring(4));
         output.put("element", element);
         
@@ -194,6 +199,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "FIRST FREEZE DATE");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Year",Integer.parseInt(element.substring(4,6)));
         output.put("Month", Integer.parseInt(element.substring(6,8)));
         output.put("Day", Integer.parseInt(element.substring(8)));
@@ -216,6 +222,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "HARVEST DATE");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("","Harvest start date");
         output.put("Year", Integer.parseInt(element.substring(4,6)));
         output.put("Month", Integer.parseInt(element.substring(6,8)));
@@ -242,6 +249,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "AQUATIC SPECIES");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Species for fisher purposes",element.substring(4));
         output.put("element",element);
         
@@ -262,6 +270,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "FISHING GEAR TYPE");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Fishing gear type",element.substring(4));
         output.put("element",element);
         
@@ -283,6 +292,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "PROD METHOD");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Production method",element.substring(4));
         output.put("element",element);
         
@@ -304,6 +314,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "REFURB LOT");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Refurbishment lot ID",element.substring(4));
         output.put("element",element);
         
@@ -325,6 +336,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "FUNC STAT");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Functional status",element.substring(4));
         output.put("element",element);
         
@@ -346,6 +358,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "REV STAT");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Revision status",element.substring(4));
         output.put("element",element);
         
@@ -367,6 +380,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "GIAI - ASSEMBLY");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Global Individual Asset Identifier",element.substring(4));
         output.put("element",element);
         
@@ -388,6 +402,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "PROCESSOR # s");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("ISO country code",Integer.parseInt(element.substring(4,7)));
         output.put("Number of processor",element.substring(7));
         output.put("element",element);
@@ -410,6 +425,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "NHRN PZN");  
         output.put("AI",element.substring(0,3));
+        output.put("Data",element.substring(3));
         output.put("National Healthcare Reimbursement Number",element.substring(3));
         output.put("Organisation","Germany IFA");
         output.put("element",element);
@@ -432,6 +448,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "NHRN CIP");  
         output.put("AI",element.substring(0,3));
+        output.put("Data",element.substring(3));
         output.put("National Healthcare Reimbursement Number",element.substring(3));
         output.put("Organisation","France CIP");
         output.put("element",element);
@@ -454,6 +471,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "NHRN CN");  
         output.put("AI",element.substring(0,3));
+        output.put("Data",element.substring(3));
         output.put("National Healthcare Reimbursement Number",element.substring(3));
         output.put("Organisation","Spain National Code");
         output.put("element",element);
@@ -476,6 +494,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "NHRN DRN");  
         output.put("AI",element.substring(0,3));
+        output.put("Data",element.substring(3));
         output.put("National Healthcare Reimbursement Number",element.substring(3));
         output.put("Organisation","Brazil ANVISA");
         output.put("element",element);
@@ -498,6 +517,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "NHRN AIM");  
         output.put("AI",element.substring(0,3));
+        output.put("Data",element.substring(3));
         output.put("National Healthcare Reimbursement Number",element.substring(3));
         output.put("Organisation","POrtugal INFARMED");
         output.put("element",element);
@@ -520,6 +540,7 @@ public class GS1_7X extends GS1 {
         
         output.put("Title", "PROCESSOR # s");  
         output.put("AI",element.substring(0,4));
+        output.put("Data",element.substring(4));
         output.put("Certification Scheme",Integer.parseInt(element.substring(4,6)));
         output.put("Certification Reference",element.substring(6));
         output.put("Element",element);
