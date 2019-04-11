@@ -6,7 +6,7 @@ public class Main {
         
         PlinkoMasterParser parser = new PlinkoMasterParser();
         
-        parser.parse("01095011015300030209501101530003");
+        parser.parse("420645421743645");
         
     }
 }
