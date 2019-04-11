@@ -53,6 +53,20 @@ public class PlinkoMasterParser {
                         break;
                     }
                     
+                     if (exclusions.contains("392") && exclusions.contains("393") {
+
+                        System.out.println("Break\n");
+                        break;
+                    }
+
+                     if (exclusions.contains("394") && exclusions.contains("8111") {
+
+                        System.out.println("Break\n");
+                        break;
+                    }
+
+                 
+                    
                     if (exclusions.contains("8006") && exclusions.contains("01") || exclusions.contains("37")) {
                         System.out.println("Break\n");
                         break;
