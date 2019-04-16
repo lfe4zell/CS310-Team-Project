@@ -70,8 +70,6 @@ public class PlinkoMasterParser {
                         System.out.println("Break\n");
                         break;
                     }
-
-                 
                     
                     if (exclusions.contains("8006") && exclusions.contains("01") || exclusions.contains("37")) {
                         System.out.println("Break\n");
@@ -83,15 +81,13 @@ public class PlinkoMasterParser {
                         break;
                     }
                     
-<<<<<<< HEAD
-=======
-                    if (exclusions.contains("392") && exclusions.contains("393") {
+                    if (exclusions.contains("392") && exclusions.contains("393")) {
 
                         System.out.println("Break\n");
                         break;
                     }
 
-                    if (exclusions.contains("394") && exclusions.contains("8111") {
+                    if (exclusions.contains("394") && exclusions.contains("8111")) {
 
                         System.out.println("Break\n");
                         break;
@@ -129,7 +125,6 @@ public class PlinkoMasterParser {
                         break;
                     }
                     
->>>>>>> bd8b55710dfe4debf02baa807a90d44693c29544
                     if (exclusions.contains("8026") && exclusions.contains("02") || exclusions.contains("8006")
                             || exclusions.contains("255")) {
                         System.out.println("Break\n");
