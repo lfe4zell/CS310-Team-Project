@@ -83,6 +83,53 @@ public class PlinkoMasterParser {
                         break;
                     }
                     
+<<<<<<< HEAD
+=======
+                    if (exclusions.contains("392") && exclusions.contains("393") {
+
+                        System.out.println("Break\n");
+                        break;
+                    }
+
+                    if (exclusions.contains("394") && exclusions.contains("8111") {
+
+                        System.out.println("Break\n");
+                        break;
+                    }
+                    
+                    if(exclusions.contains("422") && exclusions.contains("426")){
+                        System.out.println("Break\n");
+                        break;
+                    }
+                  
+                    if(exclusions.contains("423") && exclusions.contains("426")){
+                        System.out.println("Break\n");
+                        break;
+                    }
+                   
+                    if(exclusions.contains("424") && exclusions.contains("426")){
+                        System.out.println("Break\n");
+
+                        break;
+                    }
+                   
+                    if(exclusions.contains("425") && exclusions.contains("426")){
+                        System.out.println("Break\n");
+                        break;
+                    }                    
+                 
+                    
+                    if (exclusions.contains("8006") && exclusions.contains("01") || exclusions.contains("37")) {
+                        System.out.println("Break\n");
+                        break;
+                    }
+                    
+                    if (exclusions.contains("8018") && exclusions.contains("8017")) {
+                        System.out.println("Break\n");
+                        break;
+                    }
+                    
+>>>>>>> bd8b55710dfe4debf02baa807a90d44693c29544
                     if (exclusions.contains("8026") && exclusions.contains("02") || exclusions.contains("8006")
                             || exclusions.contains("255")) {
                         System.out.println("Break\n");
